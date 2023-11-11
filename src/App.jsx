@@ -1,6 +1,7 @@
 import React, { useEffect } from 'react'
 import ProductList from './store/components/ProductList'
 import { useDispatch } from 'react-redux'
+import Navbar from './store/components/Navbar';
 export default function App() {
   const dispatch = useDispatch();
   const handleAddProduct = () => {
@@ -14,6 +15,7 @@ export default function App() {
   }
   return (
     <div>
+      <header><Navbar/></header>
       <button onClick={() => {
         handleAddProduct()
       }}>Add Product Random</button>
